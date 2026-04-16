@@ -1,0 +1,140 @@
+---
+title: "Disrupções Institucionais e a Filantropia de Empresas Multinacionais"
+subtitle: "Teoria Institucional"
+author:
+  - Felipe Luiz Fonseca
+  - Paulo Aragão Daldegan
+institute: |
+  Disciplina: Teoria das Organizações  
+  Prof. Dr. Adriano Olímpio Tonelli
+format:
+  beamer:
+    theme: Madrid
+    colortheme: default
+    toc: false
+    slide-level: 2
+fontsize: 11pt
+---
+
+## Artigo
+
+![](figuras/artigo.png){width=70%}
+
+---
+
+## Resumo
+
+Este estudo examina como empresas multinacionais (EMNs) respondem a disrupções institucionais, como desastres naturais, epidemias e ataques terroristas, por meio de atividades filantrópicas.
+
+Os autores argumentam que as empresas são motivadas não apenas por reputação ou altruísmo, mas também pela **restauração do funcionamento dos mercados** economicamente relevantes.
+
+- Base global inédita (1990–2019)
+- Relação positiva entre importância econômica e volume de doações
+- Influência do contexto institucional
+
+---
+
+## Introdução
+
+Nas últimas décadas, a literatura em organizações analisou as motivações empresariais na resolução de problemas sociais.
+
+**Disrupções institucionais:**
+
+- Choques severos
+- Sistêmicos
+- Súbitos
+- Temporários
+
+Exemplos:
+
+- Desastres naturais
+- Epidemias
+- Ataques terroristas
+
+---
+
+## Introdução
+
+As disrupções comprometem instituições de mercado:
+
+- Destruição de infraestrutura
+- Redução da produtividade
+- Interrupção regulatória
+- Cancelamento de investimentos
+
+Consequência: impacto direto no desempenho das firmas.
+
+---
+
+## Introdução
+
+Empresas multinacionais tornam-se atores centrais:
+
+- Participação crescente na recuperação
+- Complemento à ação estatal
+
+---
+
+## Introdução
+
+Motivações tradicionais da filantropia:
+
+- Altruísmo
+- Reputação
+- Pressões sociais
+- Gestão de risco político
+
+**Nova proposta do artigo:**
+
+### Restauração do Mercado
+
+---
+
+## Teorias e Hipóteses
+
+**Definição: Disrupções Institucionais**
+
+- Quebras sistêmicas
+- Severas
+- Súbitas
+- Temporárias
+
+Exemplos:
+
+- Japão (2011)
+- Furacão Katrina
+- Tailândia (2011)
+
+---
+
+## Teorias e Hipóteses
+
+### H1 — Importância Econômica
+
+Maior dependência do mercado ⇒ maior volume de doações.
+
+---
+
+## Teorias e Hipóteses
+
+### H2 — Concentração de Mercado
+
+Mercados concentrados ampliam incentivos para doação.
+
+---
+
+## Teorias e Hipóteses
+
+### H3 — Ajuda Pública
+
+Ajuda governamental gera efeito **crowding-out**.
+
+---
+
+## Teorias e Hipóteses
+
+### H4 — Qualidade Regulatória
+
+Maior qualidade institucional ⇒ maior efetividade das doações.
+
+---

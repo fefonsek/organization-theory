@@ -1,0 +1,15 @@
+project:
+  type: default
+  output-dir: output
+
+format:
+  beamer:
+    theme: Madrid
+    colortheme: default
+    slide-level: 2
+    toc: false
+    fontsize: 11pt
+
+execute:
+  echo: false
+  warning: false
