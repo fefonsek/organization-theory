@@ -1,11 +1,9 @@
 ---
 title: "Disrupções Institucionais e a Filantropia de Empresas Multinacionais"
 author:
-  - Luis Ballesteros
-  - Christian Magelssen
+  - Felipe Fonseca | Paulo Aragão
 institute: |
-  Disciplina: Teoria das Organizações  
-  Prof. Dr. Adriano Olímpio Tonelli
+  Disciplina: Teoria das Organizações | Prof. Dr. Adriano Olímpio Tonelli
 lang: pt-BR
 format:
   beamer:
@@ -42,11 +40,6 @@ format:
         \usepackage{graphicx}
         \logo{\includegraphics[height=1cm]{IFMG.png}}
 fontsize: 10pt
----
-
-## 
-
-\titlepage
 
 ---
 
@@ -201,7 +194,7 @@ Resultados persistem mesmo controlando:
 
 ---
 
-## Introdução
+## Teorias e hipoteses
 
 \textbf{Instituições Orientadas ao Mercado}
 
@@ -219,7 +212,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 
 ---
 
-## Introdução
+## Teorias e hipoteses
 
 \textbf{Problemas Institucionais}
 
