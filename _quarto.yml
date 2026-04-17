@@ -5,7 +5,6 @@ project:
 format:
   beamer:
     theme: Madrid
-    colortheme: default
     slide-level: 2
     toc: false
     fontsize: 11pt

@@ -1,0 +1,802 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  ignorenonframetext,
+  aspectratio=169,
+  brazilian,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\usetheme[]{Madrid}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\definecolor{CustomGreen}{HTML}{1B5E20}
+\definecolor{CustomGreenLight}{HTML}{388E3C}
+\definecolor{CustomGreenDark}{HTML}{0D3B12}
+\setbeamercolor{structure}{fg=CustomGreen}
+\setbeamercolor{title}{fg=white,bg=CustomGreen}
+\setbeamercolor{frametitle}{fg=white,bg=CustomGreen}
+\setbeamercolor{block title}{fg=white,bg=CustomGreen}
+\setbeamercolor{block body}{fg=black,bg=white}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{CustomGreen}●}
+\setbeamertemplate{itemize subitem}{\color{CustomGreen}–}
+\setbeamertemplate{itemize subsubitem}{\color{CustomGreen}•}
+\setbeamertemplate{footline}[frame number]
+% Slide de agenda automático a cada seção
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% Adiciona logo no canto superior direito
+\usepackage{graphicx}
+\logo{\includegraphics[height=1cm]{IFMG.png}}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Disrupções Institucionais e a Filantropia de Empresas Multinacionais},
+  pdfauthor={Luis Ballesteros; Christian Magelssen},
+  pdflang={pt-BR},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Disrupções Institucionais e a Filantropia de Empresas
+Multinacionais}
+\author{Luis Ballesteros \and Christian Magelssen}
+\date{}
+\institute{Disciplina: Teoria das Organizações Prof.~Dr.~Adriano Olímpio
+Tonelli}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{}
+\phantomsection\label{section}
+\titlepage
+\end{frame}
+
+\begin{frame}{Artigo}
+\phantomsection\label{artigo}
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{figuras/artigo.png}
+\end{frame}
+
+\begin{frame}{Resumo}
+\phantomsection\label{resumo}
+Este estudo examina como empresas multinacionais (EMNs) respondem a
+disrupções institucionais, como desastres naturais, epidemias e ataques
+terroristas, por meio de atividades filantrópicas. Os autores argumentam
+que as empresas são motivadas a doar não apenas por razões reputacionais
+ou altruístas, mas também para restaurar o funcionamento dos mercados
+dos países que são economicamente importantes para elas.
+\end{frame}
+
+\begin{frame}{Resumo}
+\phantomsection\label{resumo-1}
+Utilizando um banco de dados global inédito de doações corporativas
+entre 1990 e 2019, o estudo mostra que quanto maior a importância
+econômica de um país para a empresa, maior tende a ser o volume de
+doações após uma disrupção. Essa relação é influenciada por fatores
+contextuais, como a concentração de grandes empresas no mercado, o nível
+de ajuda pública e a qualidade regulatória.
+
+Os resultados contribuem para a literatura ao introduzir a restauração
+do mercado como um motivo estratégico central para a filantropia
+corporativa e ao destacar o papel das empresas na recuperação
+institucional após grandes choques.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o}
+Nas últimas décadas, a literatura em organizações tem analisado as
+motivações das empresas na resolução de problemas sociais.
+
+Grande parte dos estudos foca em problemas crônicos (pobreza, educação,
+saúde) em contextos institucionais estáveis.
+
+Este artigo introduz o conceito de \textbf{disrupções institucionais}:
+
+\begin{itemize}
+\tightlist
+\item
+  Choques severos, sistêmicos, súbitos e temporários
+\item
+  Ex.: desastres naturais, epidemias, ataques terroristas
+\end{itemize}
+
+Esses eventos afetam diretamente o funcionamento dos mercados.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-1}
+As disrupções comprometem o funcionamento das instituições de mercado:
+
+\begin{itemize}
+\tightlist
+\item
+  Destruição de infraestrutura e queda do poder de compra
+\item
+  Redução da produtividade (perda de saúde, educação, moradia)
+\item
+  Interrupção de sistemas regulatórios
+\item
+  Cancelamento de investimentos
+\end{itemize}
+
+Consequência: forte impacto na atividade econômica e no desempenho das
+firmas.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-2}
+Empresas multinacionais (EMNs) tornaram-se atores centrais na
+recuperação pós-desastres:
+
+\begin{itemize}
+\tightlist
+\item
+  Crescente participação no financiamento da recuperação
+\item
+  Superando governos e organizações multilaterais
+\end{itemize}
+
+Compreender suas motivações é essencial para coordenar recursos e
+acelerar a recuperação econômica.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-3}
+A literatura tradicional explica a filantropia empresarial por:
+
+\begin{itemize}
+\tightlist
+\item
+  Altruísmo e reciprocidade
+\item
+  Reputação
+\item
+  Pressões sociais e políticas
+\item
+  Gestão de risco político
+\end{itemize}
+
+Este artigo propõe um novo motivo:
+
+\textbf{Restauração do mercado}
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-4}
+A importância econômica de um país para a empresa determina sua
+resposta:
+
+\begin{itemize}
+\tightlist
+\item
+  Quanto maior a dependência do mercado local
+\item
+  Maior o impacto da disrupção no desempenho da firma
+\item
+  Maior o incentivo para doar e restaurar o mercado
+\end{itemize}
+
+A filantropia passa a ser uma \textbf{estratégia econômica}.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-5}
+A relação principal é influenciada por:
+
+\begin{itemize}
+\tightlist
+\item
+  Presença de outras grandes empresas (concorrência)
+\item
+  Nível de ajuda pública (doméstica e internacional)
+\item
+  Qualidade regulatória do país
+\end{itemize}
+
+Esses fatores afetam os custos e benefícios de doar.
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-6}
+Base de dados inédita:
+
+\begin{itemize}
+\tightlist
+\item
+  Doações globais (1990--2019)
+\item
+  Desastres: epidemias, desastres naturais e ataques terroristas
+\item
+  2.000 maiores multinacionais e suas afiliadas
+\end{itemize}
+
+Medida-chave:
+
+\begin{itemize}
+\tightlist
+\item
+  Importância econômica do país para a empresa
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-7}
+\begin{itemize}
+\tightlist
+\item
+  Importância econômica \(\uparrow\) \(\Rightarrow\) Doações
+  \(\uparrow\)
+\item
+  Evidência robusta em diferentes especificações
+\item
+  Doações focadas na restauração do mercado
+\end{itemize}
+
+Resultados persistem mesmo controlando:
+
+\begin{itemize}
+\tightlist
+\item
+  Reputação
+\item
+  Pressão política
+\item
+  Mídia
+\item
+  Altruísmo
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-8}
+\begin{itemize}
+\tightlist
+\item
+  Introduz o motivo de \textbf{restauração do mercado}
+\item
+  Explica comportamento distinto em contextos de crise
+\item
+  Formaliza o conceito de disrupções institucionais
+\item
+  Destaca o papel das EMNs na recuperação econômica
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses}
+\textbf{Definição: Disrupções Institucionais}
+
+\begin{itemize}
+\tightlist
+\item
+  Quebras sistêmicas, súbitas, severas e temporárias
+\item
+  Afetam instituições que sustentam o mercado
+\end{itemize}
+
+\textbf{Exemplos:}
+
+\begin{itemize}
+\tightlist
+\item
+  Terremoto e tsunami de Tōhoku (Japão, 2011)
+\item
+  Furacão Katrina (EUA)
+\item
+  Enchentes na Tailândia (2011)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-9}
+\textbf{Instituições Orientadas ao Mercado}
+
+Estruturas que viabilizam a troca de bens e serviços:
+
+\begin{itemize}
+\tightlist
+\item
+  Mercados de produto, capital e trabalho
+\item
+  Infraestrutura física (transporte, energia)
+\item
+  Intermediários (ex.: bancos)
+\item
+  Sistemas regulatórios e de enforcement
+\end{itemize}
+
+\textbf{Importância:}
+
+\begin{itemize}
+\tightlist
+\item
+  Determinam os \textbf{custos de transação e produção}
+\item
+  Influenciam a \textbf{capacidade operacional das firmas}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o-10}
+\textbf{Problemas Institucionais}
+
+\textbf{Vazios Institucionais}
+
+\begin{itemize}
+\tightlist
+\item
+  Ausência crônica de elementos essenciais
+\item
+  Geram \textbf{falhas de mercado}
+\item
+  Empresas internalizam atividades ou evitam operar
+\end{itemize}
+
+\textbf{Mudanças Institucionais Evolutivas}
+
+\begin{itemize}
+\tightlist
+\item
+  Alterações graduais ou pontuais
+\item
+  São \textbf{duradouras}
+\item
+  Permitem adaptação estratégica ao longo do tempo
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-1}
+\textbf{Características das Disrupções}
+
+\begin{itemize}
+\tightlist
+\item
+  Temporalidade curta
+\item
+  Caráter súbito e imprevisível
+\item
+  Alta severidade econômica
+\item
+  Natureza sistêmica (pervasividade)
+\end{itemize}
+
+\textbf{Evidência:}
+
+\begin{itemize}
+\tightlist
+\item
+  Tailândia (2011): +14.000 empresas afetadas
+\item
+  Japão (2011): ruptura em cadeias globais
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-2}
+\textbf{Mecanismo Teórico: Restauração de Mercado}
+
+\begin{itemize}
+\tightlist
+\item
+  Firmas dependem de infraestrutura, trabalho e instituições
+\item
+  Disrupções reduzem capacidade operacional
+\end{itemize}
+
+\textbf{Exemplo:}
+
+\begin{itemize}
+\tightlist
+\item
+  Toyota: incapacidade de operar devido à falta de energia e
+  fornecedores
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-3}
+\textbf{Lógica de Investimento}
+
+\begin{itemize}
+\tightlist
+\item
+  Doações não são apenas altruísmo
+\item
+  São investimentos para restaurar o mercado
+\item
+  Reduzem perdas futuras
+\end{itemize}
+
+\textbf{Exemplos:}
+
+\begin{itemize}
+\tightlist
+\item
+  Honda: \$3,7 milhões + geradores (Tailândia)
+\item
+  Shell: reconstrução após Furacão Katrina
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-4}
+\textbf{Estratégia Não Mercadológica}
+
+\begin{itemize}
+\tightlist
+\item
+  Filantropia como ferramenta estratégica
+\item
+  Mais rápida que lobby ou ação governamental
+\item
+  Atua diretamente na reconstrução institucional
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-5}
+\textbf{H1 – Importância Econômica (Efeito Direto)}
+
+\begin{itemize}
+\tightlist
+\item
+  Quanto maior a relevância do país para a empresa:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (vendas, ativos, funcionários)
+  \end{itemize}
+\item
+  Maior será o volume de doações após a disrupção
+\end{itemize}
+
+\textbf{Lógica:}
+
+\begin{itemize}
+\tightlist
+\item
+  Custo de não agir \(>\) custo da doação
+\item
+  Necessidade de restaurar o mercado para retomar operações
+\end{itemize}
+
+\textbf{Exemplo:}
+
+\begin{itemize}
+\tightlist
+\item
+  Empresa de mineração (Chile, 2010):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Representava \$\sim\$3\% do PIB
+  \item
+    Doou \$10 milhões para reconstrução
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-6}
+\textbf{H2 – Concentração de Mercado (Moderador)}
+
+\begin{itemize}
+\tightlist
+\item
+  Mercados mais concentrados fortalecem H1
+\item
+  Menos empresas relevantes dividindo custos
+\end{itemize}
+
+\textbf{Lógica:}
+
+\begin{itemize}
+\tightlist
+\item
+  Firmas capturam maior parcela dos benefícios
+\item
+  Doação funciona como \textbf{contenção de perdas (stop-loss)}
+\end{itemize}
+
+\textbf{Exemplo:}
+
+\begin{itemize}
+\tightlist
+\item
+  Setor de mineração no Chile:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Alta concentração
+  \item
+    Forte incentivo para investir na recuperação
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-7}
+\textbf{H3a e H3b – Ajuda Pública (Moderador)}
+
+\begin{itemize}
+\tightlist
+\item
+  Ajuda governamental (doméstica e internacional)
+\item
+  Reduz incentivo das empresas para doar
+\end{itemize}
+
+\textbf{Lógica:}
+
+\begin{itemize}
+\tightlist
+\item
+  Efeito de \textbf{crowding-out}
+\item
+  Empresas esperam que o setor público financie a recuperação
+\end{itemize}
+
+\textbf{Exemplo:}
+
+\begin{itemize}
+\tightlist
+\item
+  Japão (2011):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Empresas monitoravam capacidade do governo
+  \item
+    Doações aumentavam quando recursos públicos eram insuficientes
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-8}
+\textbf{H4 – Qualidade Regulatória (Moderador)}
+
+\begin{itemize}
+\tightlist
+\item
+  Alta qualidade regulatória fortalece H1
+\item
+  Baixa qualidade reduz incentivos para doar
+\end{itemize}
+
+\textbf{Lógica:}
+
+\begin{itemize}
+\tightlist
+\item
+  Governos eficientes:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Melhor alocação dos recursos
+  \item
+    Maior retorno da doação
+  \end{itemize}
+\item
+  Governos ineficientes:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Corrupção, atrasos e desperdícios
+  \end{itemize}
+\end{itemize}
+
+\textbf{Exemplo:}
+
+\begin{itemize}
+\tightlist
+\item
+  Haiti (2010):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Problemas de governança
+  \item
+    Atraso na recuperação e desvio de recursos
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-9}
+\textbf{Contribuições e Rupturas}
+
+\begin{itemize}
+\tightlist
+\item
+  Firmas dominantes doam mais (contrário à literatura)
+\item
+  Empresas mais expostas são as maiores doadoras
+\item
+  Filantropia como estratégia econômica
+\item
+  Benefício coletivo: restauração do mercado
+\end{itemize}
+\end{frame}
+
+
+
+
+\end{document}

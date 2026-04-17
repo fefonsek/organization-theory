@@ -1,19 +1,53 @@
 ---
 title: "Disrupções Institucionais e a Filantropia de Empresas Multinacionais"
-subtitle: "Teoria Institucional"
 author:
-  - Felipe Luiz Fonseca
-  - Paulo Aragão Daldegan
+  - Luis Ballesteros
+  - Christian Magelssen
 institute: |
   Disciplina: Teoria das Organizações  
   Prof. Dr. Adriano Olímpio Tonelli
+lang: pt-BR
 format:
   beamer:
     theme: Madrid
-    colortheme: default
-    toc: false
+    aspectratio: 169
     slide-level: 2
-fontsize: 11pt
+    keep-tex: true
+    toc: false
+    number-sections: false
+    include-in-header:
+      text: |
+        \definecolor{CustomGreen}{HTML}{1B5E20}
+        \definecolor{CustomGreenLight}{HTML}{388E3C}
+        \definecolor{CustomGreenDark}{HTML}{0D3B12}
+        \setbeamercolor{structure}{fg=CustomGreen}
+        \setbeamercolor{title}{fg=white,bg=CustomGreen}
+        \setbeamercolor{frametitle}{fg=white,bg=CustomGreen}
+        \setbeamercolor{block title}{fg=white,bg=CustomGreen}
+        \setbeamercolor{block body}{fg=black,bg=white}
+        \setbeamertemplate{navigation symbols}{}
+        \setbeamertemplate{itemize item}{\color{CustomGreen}●}
+        \setbeamertemplate{itemize subitem}{\color{CustomGreen}–}
+        \setbeamertemplate{itemize subsubitem}{\color{CustomGreen}•}
+        \setbeamertemplate{footline}[frame number]
+        % Slide de agenda automático a cada seção
+        \AtBeginSection[]
+        {
+          \begin{frame}
+          \frametitle{Agenda}
+          \tableofcontents[currentsection]
+          \end{frame}
+        }
+        % Adiciona logo no canto superior direito
+        \usepackage{graphicx}
+        \logo{\includegraphics[height=1cm]{IFMG.png}}
+fontsize: 10pt
+---
+
+## 
+
+\titlepage
+
 ---
 
 ## Artigo
@@ -24,117 +58,328 @@ fontsize: 11pt
 
 ## Resumo
 
-Este estudo examina como empresas multinacionais (EMNs) respondem a disrupções institucionais, como desastres naturais, epidemias e ataques terroristas, por meio de atividades filantrópicas.
+Este estudo examina como empresas multinacionais (EMNs) respondem a disrupções institucionais, como desastres naturais, epidemias e ataques terroristas, por meio de atividades filantrópicas. Os autores argumentam que as empresas são motivadas a doar não apenas por razões reputacionais ou altruístas, mas também para restaurar o funcionamento dos mercados dos países que são economicamente importantes para elas.
 
-Os autores argumentam que as empresas são motivadas não apenas por reputação ou altruísmo, mas também pela **restauração do funcionamento dos mercados** economicamente relevantes.
+---
 
-- Base global inédita (1990–2019)
-- Relação positiva entre importância econômica e volume de doações
-- Influência do contexto institucional
+## Resumo
+
+Utilizando um banco de dados global inédito de doações corporativas entre 1990 e 2019, o estudo mostra que quanto maior a importância econômica de um país para a empresa, maior tende a ser o volume de doações após uma disrupção. Essa relação é influenciada por fatores contextuais, como a concentração de grandes empresas no mercado, o nível de ajuda pública e a qualidade regulatória.
+
+Os resultados contribuem para a literatura ao introduzir a restauração do mercado como um motivo estratégico central para a filantropia corporativa e ao destacar o papel das empresas na recuperação institucional após grandes choques.
 
 ---
 
 ## Introdução
 
-Nas últimas décadas, a literatura em organizações analisou as motivações empresariais na resolução de problemas sociais.
+Nas últimas décadas, a literatura em organizações tem analisado as motivações das empresas na resolução de problemas sociais.
 
-**Disrupções institucionais:**
+Grande parte dos estudos foca em problemas crônicos (pobreza, educação, saúde) em contextos institucionais estáveis.
 
-- Choques severos
-- Sistêmicos
-- Súbitos
-- Temporários
+Este artigo introduz o conceito de \textbf{disrupções institucionais}:
 
-Exemplos:
+- Choques severos, sistêmicos, súbitos e temporários
+- Ex.: desastres naturais, epidemias, ataques terroristas
 
-- Desastres naturais
-- Epidemias
-- Ataques terroristas
+Esses eventos afetam diretamente o funcionamento dos mercados.
 
 ---
 
 ## Introdução
 
-As disrupções comprometem instituições de mercado:
+As disrupções comprometem o funcionamento das instituições de mercado:
 
-- Destruição de infraestrutura
-- Redução da produtividade
-- Interrupção regulatória
+- Destruição de infraestrutura e queda do poder de compra
+- Redução da produtividade (perda de saúde, educação, moradia)
+- Interrupção de sistemas regulatórios
 - Cancelamento de investimentos
 
-Consequência: impacto direto no desempenho das firmas.
+Consequência: forte impacto na atividade econômica e no desempenho das firmas.
 
 ---
 
 ## Introdução
 
-Empresas multinacionais tornam-se atores centrais:
+Empresas multinacionais (EMNs) tornaram-se atores centrais na recuperação pós-desastres:
 
-- Participação crescente na recuperação
-- Complemento à ação estatal
+- Crescente participação no financiamento da recuperação
+- Superando governos e organizações multilaterais
+
+Compreender suas motivações é essencial para coordenar recursos e acelerar a recuperação econômica.
 
 ---
 
 ## Introdução
 
-Motivações tradicionais da filantropia:
+A literatura tradicional explica a filantropia empresarial por:
 
-- Altruísmo
+- Altruísmo e reciprocidade
 - Reputação
-- Pressões sociais
+- Pressões sociais e políticas
 - Gestão de risco político
 
-**Nova proposta do artigo:**
+Este artigo propõe um novo motivo:
 
-### Restauração do Mercado
-
----
-
-## Teorias e Hipóteses
-
-**Definição: Disrupções Institucionais**
-
-- Quebras sistêmicas
-- Severas
-- Súbitas
-- Temporárias
-
-Exemplos:
-
-- Japão (2011)
-- Furacão Katrina
-- Tailândia (2011)
+\textbf{Restauração do mercado}
 
 ---
 
-## Teorias e Hipóteses
+## Introdução
 
-### H1 — Importância Econômica
+A importância econômica de um país para a empresa determina sua resposta:
 
-Maior dependência do mercado ⇒ maior volume de doações.
+- Quanto maior a dependência do mercado local
+- Maior o impacto da disrupção no desempenho da firma
+- Maior o incentivo para doar e restaurar o mercado
 
----
-
-## Teorias e Hipóteses
-
-### H2 — Concentração de Mercado
-
-Mercados concentrados ampliam incentivos para doação.
+A filantropia passa a ser uma \textbf{estratégia econômica}.
 
 ---
 
-## Teorias e Hipóteses
+## Introdução
 
-### H3 — Ajuda Pública
+A relação principal é influenciada por:
 
-Ajuda governamental gera efeito **crowding-out**.
+- Presença de outras grandes empresas (concorrência)
+- Nível de ajuda pública (doméstica e internacional)
+- Qualidade regulatória do país
+
+Esses fatores afetam os custos e benefícios de doar.
+
+---
+
+## Introdução
+
+Base de dados inédita:
+
+- Doações globais (1990–2019)
+- Desastres: epidemias, desastres naturais e ataques terroristas
+- 2.000 maiores multinacionais e suas afiliadas
+
+Medida-chave:
+
+- Importância econômica do país para a empresa
 
 ---
 
-## Teorias e Hipóteses
+## Introdução
 
-### H4 — Qualidade Regulatória
+- Importância econômica $\uparrow$ $\Rightarrow$ Doações $\uparrow$
+- Evidência robusta em diferentes especificações
+- Doações focadas na restauração do mercado
 
-Maior qualidade institucional ⇒ maior efetividade das doações.
+Resultados persistem mesmo controlando:
+
+- Reputação
+- Pressão política
+- Mídia
+- Altruísmo
 
 ---
+
+## Introdução
+
+- Introduz o motivo de \textbf{restauração do mercado}
+- Explica comportamento distinto em contextos de crise
+- Formaliza o conceito de disrupções institucionais
+- Destaca o papel das EMNs na recuperação econômica
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Definição: Disrupções Institucionais}
+
+- Quebras sistêmicas, súbitas, severas e temporárias
+- Afetam instituições que sustentam o mercado
+
+\textbf{Exemplos:}
+
+- Terremoto e tsunami de Tōhoku (Japão, 2011)
+- Furacão Katrina (EUA)
+- Enchentes na Tailândia (2011)
+
+---
+
+## Introdução
+
+\textbf{Instituições Orientadas ao Mercado}
+
+Estruturas que viabilizam a troca de bens e serviços:
+
+- Mercados de produto, capital e trabalho
+- Infraestrutura física (transporte, energia)
+- Intermediários (ex.: bancos)
+- Sistemas regulatórios e de enforcement
+
+\textbf{Importância:}
+
+- Determinam os \textbf{custos de transação e produção}
+- Influenciam a \textbf{capacidade operacional das firmas}
+
+---
+
+## Introdução
+
+\textbf{Problemas Institucionais}
+
+\textbf{Vazios Institucionais}
+
+- Ausência crônica de elementos essenciais
+- Geram \textbf{falhas de mercado}
+- Empresas internalizam atividades ou evitam operar
+
+\textbf{Mudanças Institucionais Evolutivas}
+
+- Alterações graduais ou pontuais
+- São \textbf{duradouras}
+- Permitem adaptação estratégica ao longo do tempo
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Características das Disrupções}
+
+- Temporalidade curta
+- Caráter súbito e imprevisível
+- Alta severidade econômica
+- Natureza sistêmica (pervasividade)
+
+\textbf{Evidência:}
+
+- Tailândia (2011): +14.000 empresas afetadas
+- Japão (2011): ruptura em cadeias globais
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Mecanismo Teórico: Restauração de Mercado}
+
+- Firmas dependem de infraestrutura, trabalho e instituições
+- Disrupções reduzem capacidade operacional
+
+\textbf{Exemplo:}
+
+- Toyota: incapacidade de operar devido à falta de energia e fornecedores
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Lógica de Investimento}
+
+- Doações não são apenas altruísmo
+- São investimentos para restaurar o mercado
+- Reduzem perdas futuras
+
+\textbf{Exemplos:}
+
+- Honda: \$3,7 milhões + geradores (Tailândia)
+- Shell: reconstrução após Furacão Katrina
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Estratégia Não Mercadológica}
+
+- Filantropia como ferramenta estratégica
+- Mais rápida que lobby ou ação governamental
+- Atua diretamente na reconstrução institucional
+
+---
+
+## Teorias e hipoteses
+
+\textbf{H1 – Importância Econômica (Efeito Direto)}
+
+- Quanto maior a relevância do país para a empresa:
+  - (vendas, ativos, funcionários)
+- Maior será o volume de doações após a disrupção
+
+\textbf{Lógica:}
+
+- Custo de não agir $>$ custo da doação
+- Necessidade de restaurar o mercado para retomar operações
+
+\textbf{Exemplo:}
+
+- Empresa de mineração (Chile, 2010):
+  - Representava $\sim$3\% do PIB
+  - Doou \$10 milhões para reconstrução
+
+---
+
+## Teorias e hipoteses
+
+\textbf{H2 – Concentração de Mercado (Moderador)}
+
+- Mercados mais concentrados fortalecem H1
+- Menos empresas relevantes dividindo custos
+
+\textbf{Lógica:}
+
+- Firmas capturam maior parcela dos benefícios
+- Doação funciona como \textbf{contenção de perdas (stop-loss)}
+
+\textbf{Exemplo:}
+
+- Setor de mineração no Chile:
+  - Alta concentração
+  - Forte incentivo para investir na recuperação
+
+---
+
+## Teorias e hipoteses
+
+\textbf{H3a e H3b – Ajuda Pública (Moderador)}
+
+- Ajuda governamental (doméstica e internacional)
+- Reduz incentivo das empresas para doar
+
+\textbf{Lógica:}
+
+- Efeito de \textbf{crowding-out}
+- Empresas esperam que o setor público financie a recuperação
+
+\textbf{Exemplo:}
+
+- Japão (2011):
+  - Empresas monitoravam capacidade do governo
+  - Doações aumentavam quando recursos públicos eram insuficientes
+
+---
+
+## Teorias e hipoteses
+
+\textbf{H4 – Qualidade Regulatória (Moderador)}
+
+- Alta qualidade regulatória fortalece H1
+- Baixa qualidade reduz incentivos para doar
+
+\textbf{Lógica:}
+
+- Governos eficientes:
+  - Melhor alocação dos recursos
+  - Maior retorno da doação
+- Governos ineficientes:
+  - Corrupção, atrasos e desperdícios
+
+\textbf{Exemplo:}
+
+- Haiti (2010):
+  - Problemas de governança
+  - Atraso na recuperação e desvio de recursos
+
+---
+
+## Teorias e hipoteses
+
+\textbf{Contribuições e Rupturas}
+
+- Firmas dominantes doam mais (contrário à literatura)
+- Empresas mais expostas são as maiores doadoras
+- Filantropia como estratégia econômica
+- Benefício coletivo: restauração do mercado
