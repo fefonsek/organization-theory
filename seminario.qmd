@@ -5,6 +5,7 @@ author:
 institute: |
   Disciplina: Teoria das Organizações | Prof. Dr. Adriano Olímpio Tonelli
 lang: pt-BR
+
 format:
   beamer:
     theme: Madrid
@@ -13,22 +14,37 @@ format:
     keep-tex: true
     toc: false
     number-sections: false
+
     include-in-header:
       text: |
+        % ---- SUMÁRIO LATERAL PDF (BOOKMARKS) ----
+        \usepackage{hyperref}
+        \hypersetup{
+          bookmarks=true,
+          bookmarksopen=true,
+          bookmarksnumbered=true,
+          pdfpagemode=UseOutlines
+        }
+
+        % ---- CORES ----
         \definecolor{CustomGreen}{HTML}{1B5E20}
         \definecolor{CustomGreenLight}{HTML}{388E3C}
         \definecolor{CustomGreenDark}{HTML}{0D3B12}
+
+        % ---- TEMA BEAMER ----
         \setbeamercolor{structure}{fg=CustomGreen}
         \setbeamercolor{title}{fg=white,bg=CustomGreen}
         \setbeamercolor{frametitle}{fg=white,bg=CustomGreen}
         \setbeamercolor{block title}{fg=white,bg=CustomGreen}
         \setbeamercolor{block body}{fg=black,bg=white}
+
         \setbeamertemplate{navigation symbols}{}
         \setbeamertemplate{itemize item}{\color{CustomGreen}●}
         \setbeamertemplate{itemize subitem}{\color{CustomGreen}–}
         \setbeamertemplate{itemize subsubitem}{\color{CustomGreen}•}
         \setbeamertemplate{footline}[frame number]
-        % Slide de agenda automático a cada seção
+
+        % ---- AGENDA AUTOMÁTICA ----
         \AtBeginSection[]
         {
           \begin{frame}
@@ -36,11 +52,12 @@ format:
           \tableofcontents[currentsection]
           \end{frame}
         }
-        % Adiciona logo no canto superior direito
+
+        % ---- LOGO ----
         \usepackage{graphicx}
         \logo{\includegraphics[height=1cm]{IFMG.png}}
-fontsize: 10pt
 
+fontsize: 10pt
 ---
 
 ## Artigo
@@ -376,3 +393,281 @@ Estruturas que viabilizam a troca de bens e serviços:
 - Empresas mais expostas são as maiores doadoras
 - Filantropia como estratégia econômica
 - Benefício coletivo: restauração do mercado
+
+## Estratégia Empírica
+
+\textbf{Objetivo Empírico}
+
+Testar se a filantropia corporativa responde à:
+
+- Importância econômica do país para a EMN
+- Condições institucionais após disrupções
+
+\textbf{Abordagem}
+
+- Análise quantitativa em painel multinível
+- Empresas $\times$ Países $\times$ Eventos
+- Eventos de disrupção institucional (1990–2019)
+
+---
+
+## Metodologia e Fontes de Dados
+
+\textbf{Base principal: Global Database of Disaster Responses}
+
+- Doações monetárias e em espécie
+- Empresas, governos e ONGs 
+- Reportadas em mídia internacional
+
+\textbf{Eventos considerados}
+
+- Epidemias
+- Desastres naturais
+- Ataques terroristas
+
+\textbf{Amostra}
+
+- 2.000 maiores multinacionais globais
+- Afiliadas internacionais (545664)
+- Painel longitudinal global
+
+---
+
+## Tratamento dos Dados
+
+\textbf{Construções empíricas}
+
+- Identificação de disrupções institucionais
+- Vinculação empresa–país
+- Ponderação por participação acionária
+
+\textbf{Uso de NLP}
+
+- Processamento de linguagem natural
+- Classificação das doações segundo finalidade:
+  - infraestrutura
+  - saúde
+  - logística
+  - funcionamento do mercado
+
+---
+
+## Variáveis do Modelo
+
+\textbf{Variável Dependente}
+
+- Volume de doações filantrópicas da EMN após a disrupção
+
+\textbf{Variável Independente Principal}
+
+- Importância econômica do país para a empresa:
+  - vendas
+  - ativos
+  - operações
+  - emprego local
+
+ ---
+
+## Variáveis do Modelo
+
+\textbf{Moderadores}
+
+- Concentração do mercado
+- Ajuda pública doméstica e internacional
+- Qualidade regulatória
+
+\textbf{Controles}
+
+- Reputação corporativa
+- Pressão governamental
+- Crescimento de mercado
+- Cobertura da mídia
+- Pobreza e desigualdade
+- Motivações altruístas dos empregados
+
+---
+
+## Modelo Econométrico
+
+\begin{equation}
+\begin{aligned}
+\ln(1 + donation_{fcd}) =\;& \beta_0 
++ \beta_1(economic\ importance_{fcd}) \\
+&+ \beta_2(e.i_{fcd} \times dominant\ MNE\ index_{cd}) \\
+&+ \beta_3(e.i_{fcd} \times host\text{-}country\ public\ aid_{cd}) \\
+&+ \beta_4(e.i_{fcd} \times foreign\ public\ aid_{cd}) \\
+&+ \beta_5(e.i_{fcd} \times regulatory\ quality_{cd}) \\
+&+ \mu_f + \delta_c + \gamma_d + \varepsilon_{fcd}
+\end{aligned}
+\end{equation}
+
+Onde:
+
+- $f$ = empresa
+- $c$ = país
+- $t$ = evento/disrupção
+- Efeitos fixos de firma, país e tempo
+
+---
+
+## Estratégia de Identificação
+
+\textbf{Técnicas empregadas}
+
+- Modelos de regressão em painel
+- Efeitos fixos múltiplos
+- Variáveis dependentes defasadas
+- Matching para reduzir viés de seleção
+
+\textbf{Objetivo}
+
+Isolar o efeito causal da importância econômica
+sobre a decisão filantrópica.
+
+## Resultados Principais
+
+\textbf{Achado central}
+
+- Importância econômica do país $\uparrow$
+$\Rightarrow$ Doações corporativas $\uparrow$
+
+Evidência consistente com o:
+
+\textbf{Motivo de restauração do mercado}
+
+Empresas investem na recuperação institucional
+para restaurar sua própria performance.
+
+---
+
+## Resultados dos Moderadores
+
+\textbf{Concentração de mercado}
+
+- Mercados concentrados $\Rightarrow$ doações maiores
+- Firmas dominantes atuam como mecanismo de estabilização
+
+\textbf{Ajuda pública}
+
+- Ajuda estatal e internacional reduz doações privadas
+- Evidência de efeito crowding-out
+
+\textbf{Qualidade regulatória}
+
+- Governança eficiente aumenta incentivos para doar
+
+---
+
+## Testes Econométricos e Robustez
+
+Resultados permanecem robustos após:
+
+- Inclusão extensiva de efeitos fixos
+- Controles alternativos de reputação
+- Pressão política
+- Visibilidade na mídia
+- Crescimento econômico
+- Motivações altruístas
+
+\textbf{Matching econométrico}
+
+- Controla auto-seleção de EMNs em países expostos a choques
+
+---
+
+## Evidência Adicional
+
+Análise textual das doações mostra:
+
+- Recursos direcionados à reconstrução institucional
+- Infraestrutura produtiva
+- Sistemas logísticos
+- Funcionamento do mercado
+
+Reforçando o mecanismo teórico proposto.
+
+---
+
+## Teste das Hipóteses
+
+| Hipótese | Previsão Teórica | Resultado |
+|---|---|---|
+| H1 | Importância econômica ↑ → Doações ↑ | ✅ Confirmada |
+| H2 | Concentração fortalece efeito | ✅ Confirmada |
+| H3a | Ajuda pública doméstica reduz doações | ⚠️ Parcial |
+| H3b | Ajuda internacional reduz doações | ❌ Não confirmada |
+| H4 | Qualidade regulatória aumenta doações | ✅ Confirmada |
+
+---
+
+## Discussão Teórica
+
+O estudo altera previsões tradicionais da teoria organizacional:
+
+- Empresas mais expostas não reduzem doações
+- Tornam-se os maiores financiadores da recuperação
+
+Filantropia deixa de ser apenas:
+
+- altruísmo
+- reputação
+
+Passa a ser \textbf{estratégia econômica institucional}.
+
+---
+
+## Contribuições para a Teoria Organizacional
+
+- Introdução do conceito de \textbf{disrupções institucionais}
+- Integra teoria institucional e estratégia não mercadológica
+- Explica comportamento corporativo sob choques extremos
+- Empresas como atores de reconstrução institucional
+
+Amplia a literatura de:
+
+- nonmarket strategy
+- corporate political activity
+- corporate social responsibility
+
+---
+
+## Implicações Gerenciais e Sociais
+
+- EMNs tornam-se agentes centrais da recuperação econômica
+- Filantropia acelera restauração dos mercados
+- Alinhamento entre interesse privado e benefício público
+
+Empresas funcionam como mecanismo de estabilização sistêmica.
+
+---
+
+## Limitações do Estudo
+
+- Dados baseados em doações reportadas na mídia
+- Possível subnotificação de ações filantrópicas
+- Foco em grandes multinacionais
+- Não captura decisões internas organizacionais
+
+---
+
+## Trabalhos Futuros
+
+- Estudos qualitativos sobre tomada de decisão executiva
+- Análise de pequenas e médias empresas
+- Avaliação de impactos de longo prazo das doações
+- Comparações entre setores industriais
+- Papel da sustentabilidade e ESG em disrupções futuras
+
+---
+
+## Conclusão
+
+Disrupções institucionais revelam um novo motivo organizacional:
+
+\textbf{Restaurar o mercado para sobreviver.}
+
+A filantropia corporativa emerge como:
+
+- resposta estratégica
+- mecanismo institucional
+- instrumento de resiliência econômica global.

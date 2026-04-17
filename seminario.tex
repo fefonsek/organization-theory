@@ -128,20 +128,34 @@
  
 
 
+% ---- SUMÁRIO LATERAL PDF (BOOKMARKS) ----
+\usepackage{hyperref}
+\hypersetup{
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  pdfpagemode=UseOutlines
+}
+
+% ---- CORES ----
 \definecolor{CustomGreen}{HTML}{1B5E20}
 \definecolor{CustomGreenLight}{HTML}{388E3C}
 \definecolor{CustomGreenDark}{HTML}{0D3B12}
+
+% ---- TEMA BEAMER ----
 \setbeamercolor{structure}{fg=CustomGreen}
 \setbeamercolor{title}{fg=white,bg=CustomGreen}
 \setbeamercolor{frametitle}{fg=white,bg=CustomGreen}
 \setbeamercolor{block title}{fg=white,bg=CustomGreen}
 \setbeamercolor{block body}{fg=black,bg=white}
+
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{itemize item}{\color{CustomGreen}●}
 \setbeamertemplate{itemize subitem}{\color{CustomGreen}–}
 \setbeamertemplate{itemize subsubitem}{\color{CustomGreen}•}
 \setbeamertemplate{footline}[frame number]
-% Slide de agenda automático a cada seção
+
+% ---- AGENDA AUTOMÁTICA ----
 \AtBeginSection[]
 {
   \begin{frame}
@@ -149,7 +163,8 @@
   \tableofcontents[currentsection]
   \end{frame}
 }
-% Adiciona logo no canto superior direito
+
+% ---- LOGO ----
 \usepackage{graphicx}
 \logo{\includegraphics[height=1cm]{IFMG.png}}
 \makeatletter
@@ -451,8 +466,8 @@ Resultados persistem mesmo controlando:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Introdução}
-\phantomsection\label{introduuxe7uxe3o-9}
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-1}
 \textbf{Instituições Orientadas ao Mercado}
 
 Estruturas que viabilizam a troca de bens e serviços:
@@ -480,8 +495,8 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Introdução}
-\phantomsection\label{introduuxe7uxe3o-10}
+\begin{frame}{Teorias e hipoteses}
+\phantomsection\label{teorias-e-hipoteses-2}
 \textbf{Problemas Institucionais}
 
 \textbf{Vazios Institucionais}
@@ -510,7 +525,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-1}
+\phantomsection\label{teorias-e-hipoteses-3}
 \textbf{Características das Disrupções}
 
 \begin{itemize}
@@ -537,7 +552,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-2}
+\phantomsection\label{teorias-e-hipoteses-4}
 \textbf{Mecanismo Teórico: Restauração de Mercado}
 
 \begin{itemize}
@@ -559,7 +574,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-3}
+\phantomsection\label{teorias-e-hipoteses-5}
 \textbf{Lógica de Investimento}
 
 \begin{itemize}
@@ -584,7 +599,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-4}
+\phantomsection\label{teorias-e-hipoteses-6}
 \textbf{Estratégia Não Mercadológica}
 
 \begin{itemize}
@@ -599,7 +614,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-5}
+\phantomsection\label{teorias-e-hipoteses-7}
 \textbf{H1 – Importância Econômica (Efeito Direto)}
 
 \begin{itemize}
@@ -644,7 +659,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-6}
+\phantomsection\label{teorias-e-hipoteses-8}
 \textbf{H2 – Concentração de Mercado (Moderador)}
 
 \begin{itemize}
@@ -683,7 +698,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-7}
+\phantomsection\label{teorias-e-hipoteses-9}
 \textbf{H3a e H3b – Ajuda Pública (Moderador)}
 
 \begin{itemize}
@@ -722,7 +737,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-8}
+\phantomsection\label{teorias-e-hipoteses-10}
 \textbf{H4 – Qualidade Regulatória (Moderador)}
 
 \begin{itemize}
@@ -775,7 +790,7 @@ Estruturas que viabilizam a troca de bens e serviços:
 \end{frame}
 
 \begin{frame}{Teorias e hipoteses}
-\phantomsection\label{teorias-e-hipoteses-9}
+\phantomsection\label{teorias-e-hipoteses-11}
 \textbf{Contribuições e Rupturas}
 
 \begin{itemize}
@@ -788,6 +803,456 @@ Estruturas que viabilizam a troca de bens e serviços:
   Filantropia como estratégia econômica
 \item
   Benefício coletivo: restauração do mercado
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Estratégia Empírica}
+\phantomsection\label{estratuxe9gia-empuxedrica}
+\textbf{Objetivo Empírico}
+
+Testar se a filantropia corporativa responde à:
+
+\begin{itemize}
+\tightlist
+\item
+  Importância econômica do país para a EMN
+\item
+  Condições institucionais após disrupções
+\end{itemize}
+
+\textbf{Abordagem}
+
+\begin{itemize}
+\tightlist
+\item
+  Análise quantitativa em painel multinível
+\item
+  Empresas \(\times\) Países \(\times\) Eventos
+\item
+  Eventos de disrupção institucional (1990--2019)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Metodologia e Fontes de Dados}
+\phantomsection\label{metodologia-e-fontes-de-dados}
+\textbf{Base principal: Global Database of Disaster Responses}
+
+\begin{itemize}
+\tightlist
+\item
+  Doações monetárias e em espécie
+\item
+  Empresas, governos e ONGs
+\item
+  Reportadas em mídia internacional
+\end{itemize}
+
+\textbf{Eventos considerados}
+
+\begin{itemize}
+\tightlist
+\item
+  Epidemias
+\item
+  Desastres naturais
+\item
+  Ataques terroristas
+\end{itemize}
+
+\textbf{Amostra}
+
+\begin{itemize}
+\tightlist
+\item
+  2.000 maiores multinacionais globais
+\item
+  Afiliadas internacionais (545664)
+\item
+  Painel longitudinal global
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tratamento dos Dados}
+\phantomsection\label{tratamento-dos-dados}
+\textbf{Construções empíricas}
+
+\begin{itemize}
+\tightlist
+\item
+  Identificação de disrupções institucionais
+\item
+  Vinculação empresa--país
+\item
+  Ponderação por participação acionária
+\end{itemize}
+
+\textbf{Uso de NLP}
+
+\begin{itemize}
+\tightlist
+\item
+  Processamento de linguagem natural
+\item
+  Classificação das doações segundo finalidade:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    infraestrutura
+  \item
+    saúde
+  \item
+    logística
+  \item
+    funcionamento do mercado
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Variáveis do Modelo}
+\phantomsection\label{variuxe1veis-do-modelo}
+\textbf{Variável Dependente}
+
+\begin{itemize}
+\tightlist
+\item
+  Volume de doações filantrópicas da EMN após a disrupção
+\end{itemize}
+
+\textbf{Variável Independente Principal}
+
+\begin{itemize}
+\tightlist
+\item
+  Importância econômica do país para a empresa:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    vendas
+  \item
+    ativos
+  \item
+    operações
+  \item
+    emprego local
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Variáveis do Modelo}
+\phantomsection\label{variuxe1veis-do-modelo-1}
+\textbf{Moderadores}
+
+\begin{itemize}
+\tightlist
+\item
+  Concentração do mercado
+\item
+  Ajuda pública doméstica e internacional
+\item
+  Qualidade regulatória
+\end{itemize}
+
+\textbf{Controles}
+
+\begin{itemize}
+\tightlist
+\item
+  Reputação corporativa
+\item
+  Pressão governamental
+\item
+  Crescimento de mercado
+\item
+  Cobertura da mídia
+\item
+  Pobreza e desigualdade
+\item
+  Motivações altruístas dos empregados
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modelo Econométrico}
+\phantomsection\label{modelo-economuxe9trico}
+\begin{equation}
+\begin{aligned}
+\ln(1 + donation_{fcd}) =\;& \beta_0 
++ \beta_1(economic\ importance_{fcd}) \\
+&+ \beta_2(e.i_{fcd} \times dominant\ MNE\ index_{cd}) \\
+&+ \beta_3(e.i_{fcd} \times host\text{-}country\ public\ aid_{cd}) \\
+&+ \beta_4(e.i_{fcd} \times foreign\ public\ aid_{cd}) \\
+&+ \beta_5(e.i_{fcd} \times regulatory\ quality_{cd}) \\
+&+ \mu_f + \delta_c + \gamma_d + \varepsilon_{fcd}
+\end{aligned}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+\tightlist
+\item
+  \(f\) = empresa
+\item
+  \(c\) = país
+\item
+  \(t\) = evento/disrupção
+\item
+  Efeitos fixos de firma, país e tempo
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Estratégia de Identificação}
+\phantomsection\label{estratuxe9gia-de-identificauxe7uxe3o}
+\textbf{Técnicas empregadas}
+
+\begin{itemize}
+\tightlist
+\item
+  Modelos de regressão em painel
+\item
+  Efeitos fixos múltiplos
+\item
+  Variáveis dependentes defasadas
+\item
+  Matching para reduzir viés de seleção
+\end{itemize}
+
+\textbf{Objetivo}
+
+Isolar o efeito causal da importância econômica sobre a decisão
+filantrópica.
+\end{frame}
+
+\begin{frame}{Resultados Principais}
+\phantomsection\label{resultados-principais}
+\textbf{Achado central}
+
+\begin{itemize}
+\tightlist
+\item
+  Importância econômica do país \(\uparrow\) \(\Rightarrow\) Doações
+  corporativas \(\uparrow\)
+\end{itemize}
+
+Evidência consistente com o:
+
+\textbf{Motivo de restauração do mercado}
+
+Empresas investem na recuperação institucional para restaurar sua
+própria performance.
+\end{frame}
+
+\begin{frame}{Resultados dos Moderadores}
+\phantomsection\label{resultados-dos-moderadores}
+\textbf{Concentração de mercado}
+
+\begin{itemize}
+\tightlist
+\item
+  Mercados concentrados \(\Rightarrow\) doações maiores
+\item
+  Firmas dominantes atuam como mecanismo de estabilização
+\end{itemize}
+
+\textbf{Ajuda pública}
+
+\begin{itemize}
+\tightlist
+\item
+  Ajuda estatal e internacional reduz doações privadas
+\item
+  Evidência de efeito crowding-out
+\end{itemize}
+
+\textbf{Qualidade regulatória}
+
+\begin{itemize}
+\tightlist
+\item
+  Governança eficiente aumenta incentivos para doar
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Testes Econométricos e Robustez}
+\phantomsection\label{testes-economuxe9tricos-e-robustez}
+Resultados permanecem robustos após:
+
+\begin{itemize}
+\tightlist
+\item
+  Inclusão extensiva de efeitos fixos
+\item
+  Controles alternativos de reputação
+\item
+  Pressão política
+\item
+  Visibilidade na mídia
+\item
+  Crescimento econômico
+\item
+  Motivações altruístas
+\end{itemize}
+
+\textbf{Matching econométrico}
+
+\begin{itemize}
+\tightlist
+\item
+  Controla auto-seleção de EMNs em países expostos a choques
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Evidência Adicional}
+\phantomsection\label{eviduxeancia-adicional}
+Análise textual das doações mostra:
+
+\begin{itemize}
+\tightlist
+\item
+  Recursos direcionados à reconstrução institucional
+\item
+  Infraestrutura produtiva
+\item
+  Sistemas logísticos
+\item
+  Funcionamento do mercado
+\end{itemize}
+
+Reforçando o mecanismo teórico proposto.
+\end{frame}
+
+\begin{frame}{Teste das Hipóteses}
+\phantomsection\label{teste-das-hipuxf3teses}
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Hipótese & Previsão Teórica & Resultado \\
+\midrule\noalign{}
+\endhead
+H1 & Importância econômica ↑ → Doações ↑ & ✅ Confirmada \\
+H2 & Concentração fortalece efeito & ✅ Confirmada \\
+H3a & Ajuda pública doméstica reduz doações & ⚠️ Parcial \\
+H3b & Ajuda internacional reduz doações & ❌ Não confirmada \\
+H4 & Qualidade regulatória aumenta doações & ✅ Confirmada \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{frame}
+
+\begin{frame}{Discussão Teórica}
+\phantomsection\label{discussuxe3o-teuxf3rica}
+O estudo altera previsões tradicionais da teoria organizacional:
+
+\begin{itemize}
+\tightlist
+\item
+  Empresas mais expostas não reduzem doações
+\item
+  Tornam-se os maiores financiadores da recuperação
+\end{itemize}
+
+Filantropia deixa de ser apenas:
+
+\begin{itemize}
+\tightlist
+\item
+  altruísmo
+\item
+  reputação
+\end{itemize}
+
+Passa a ser \textbf{estratégia econômica institucional}.
+\end{frame}
+
+\begin{frame}{Contribuições para a Teoria Organizacional}
+\phantomsection\label{contribuiuxe7uxf5es-para-a-teoria-organizacional}
+\begin{itemize}
+\tightlist
+\item
+  Introdução do conceito de \textbf{disrupções institucionais}
+\item
+  Integra teoria institucional e estratégia não mercadológica
+\item
+  Explica comportamento corporativo sob choques extremos
+\item
+  Empresas como atores de reconstrução institucional
+\end{itemize}
+
+Amplia a literatura de:
+
+\begin{itemize}
+\tightlist
+\item
+  nonmarket strategy
+\item
+  corporate political activity
+\item
+  corporate social responsibility
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Implicações Gerenciais e Sociais}
+\phantomsection\label{implicauxe7uxf5es-gerenciais-e-sociais}
+\begin{itemize}
+\tightlist
+\item
+  EMNs tornam-se agentes centrais da recuperação econômica
+\item
+  Filantropia acelera restauração dos mercados
+\item
+  Alinhamento entre interesse privado e benefício público
+\end{itemize}
+
+Empresas funcionam como mecanismo de estabilização sistêmica.
+\end{frame}
+
+\begin{frame}{Limitações do Estudo}
+\phantomsection\label{limitauxe7uxf5es-do-estudo}
+\begin{itemize}
+\tightlist
+\item
+  Dados baseados em doações reportadas na mídia
+\item
+  Possível subnotificação de ações filantrópicas
+\item
+  Foco em grandes multinacionais
+\item
+  Não captura decisões internas organizacionais
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Trabalhos Futuros}
+\phantomsection\label{trabalhos-futuros}
+\begin{itemize}
+\tightlist
+\item
+  Estudos qualitativos sobre tomada de decisão executiva
+\item
+  Análise de pequenas e médias empresas
+\item
+  Avaliação de impactos de longo prazo das doações
+\item
+  Comparações entre setores industriais
+\item
+  Papel da sustentabilidade e ESG em disrupções futuras
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusão}
+\phantomsection\label{conclusuxe3o}
+Disrupções institucionais revelam um novo motivo organizacional:
+
+\textbf{Restaurar o mercado para sobreviver.}
+
+A filantropia corporativa emerge como:
+
+\begin{itemize}
+\tightlist
+\item
+  resposta estratégica
+\item
+  mecanismo institucional
+\item
+  instrumento de resiliência econômica global.
 \end{itemize}
 \end{frame}
 
